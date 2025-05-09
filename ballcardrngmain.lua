@@ -73,8 +73,9 @@ local Button = Misc:Button({
 	Desc = "yeah",
 	Locked = false,
 	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/DigitalDoomsday/BallCardRNG/refs/heads/main/ballcardrngmain.lua"))()
 		Window:Close():Destroy()
-        	loadstring(game:HttpGet("https://raw.githubusercontent.com/DigitalDoomsday/BallCardRNG/refs/heads/main/ballcardrngmain.lua"))()
+        	--loadstring(game:HttpGet("https://raw.githubusercontent.com/DigitalDoomsday/BallCardRNG/refs/heads/main/ballcardrngmain.lua"))()
 	end
 })
 local Button = CollectTab:Button({
