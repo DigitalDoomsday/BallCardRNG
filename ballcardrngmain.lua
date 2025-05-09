@@ -69,6 +69,16 @@ local Button = Misc:Button({
 		---game.Players.LocalPlayer.Character.Humanoid
 	end
 })
+local Button = Misc:Button({
+	Title = "Restart (update)",
+	Desc = "yeah",
+	Locked = false,
+	Callback = function()
+		Window:Close():Destroy()
+        
+		---game.Players.LocalPlayer.Character.Humanoid
+	end
+})
 local Button = CollectTab:Button({
 	Title = "Collect All Cards",
 	Desc = "Collects all cards within render distance.",
