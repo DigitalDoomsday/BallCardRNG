@@ -237,6 +237,20 @@ local Button = OctillionTab:Button({
 		end
 	end
 })
+local atstorage = false
+local Button = OctillionTab:Button({
+	Title = "TP to ore storage",
+	Desc = "Click again to tp back to spawn",
+	Locked = false,
+	Callback = function()
+		if atstorage == false then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.Position = Vector3.new(-419, 510, 676)
+			atstorage = true
+		elseif atstorage == true then 
+			game.Players.LocalPlayer.HumanoidRootPart.CFrame = workspace.SpawnLocation.CFrame * CFrame.new(0, 5, 0)
+		end
+	end
+})
 local Toggle = Tab:Toggle({
 	Title = "AutoFarm",
 	Desc = "Toggles autofarm which automatically clicks a spawner and collects the card that was spawned.",
