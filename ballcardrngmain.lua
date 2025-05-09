@@ -66,7 +66,6 @@ local Button = Misc:Button({
 		local char = game.Players.LocalPlayer.Character
 		char.Humanoid:RemoveAccessories()
 		char.Humanoid:ApplyDescriptionClientServer(desc)
-		---game.Players.LocalPlayer.Character.Humanoid
 	end
 })
 local Button = Misc:Button({
@@ -75,8 +74,7 @@ local Button = Misc:Button({
 	Locked = false,
 	Callback = function()
 		Window:Close():Destroy()
-        
-		---game.Players.LocalPlayer.Character.Humanoid
+        	loadstring(game:HttpGet("https://raw.githubusercontent.com/DigitalDoomsday/BallCardRNG/refs/heads/main/ballcardrngmain.lua?token=GHSAT0AAAAAADDS5FAFMUEHST7NWOA76MWY2A55AJA"))()
 	end
 })
 local Button = CollectTab:Button({
@@ -216,6 +214,18 @@ local XSpawnsXRarity = workspace:WaitForChild("MainSpawner10")
 local AutoFarmSelection = "X more attributes"
 local AutoFarmToggle
 local Button = Tab:Button({
+	Title = "Toggle Wandering Trader UI",
+	Desc = "Self-Explanatory.",
+	Locked = false,
+	Callback = function()
+		if game.Players.LocalPlayer.PlayerGui.shopwanderingtrader.Enabled == false then
+			game.Players.LocalPlayer.PlayerGui.shopwanderingtrader.Enabled = true
+		elseif game.Players.LocalPlayer.PlayerGui.shopwanderingtrader.Enabled == true then
+			game.Players.LocalPlayer.PlayerGui.shopwanderingtrader.Enabled = false
+		end
+	end
+})
+local Button = OctillionTab:Button({
 	Title = "Toggle Wandering Trader UI",
 	Desc = "Self-Explanatory.",
 	Locked = false,
