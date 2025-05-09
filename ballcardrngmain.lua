@@ -245,7 +245,7 @@ local Button = OctillionTab:Button({
 	Locked = false,
 	Callback = function()
 		if atstorage == false then
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace:GetChildren()[1085].CFrame
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Kelly70371.Head.CFrame * CFrame.new(0, 5, 0)
 			atstorage = true
 		elseif atstorage == true then 
 			atstorage = false
