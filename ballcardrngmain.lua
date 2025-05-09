@@ -238,6 +238,25 @@ local Button = OctillionTab:Button({
 		end
 	end
 })
+local Button = OctillionTab:Button({
+	Title = "Open All Boxes in Inventory",
+	Desc = "Self-Explanatory.",
+	Locked = false,
+	Callback = function()
+		for i,v in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+			if string.find(v.Name, "Firework") then
+				game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+				game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):Activate()
+			end
+		end
+	end
+})
+for i,v in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+			if string.find(v.Name, "Firework") then
+				game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+				game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):Activate()
+			end
+		end
 local atstorage = false
 local Button = OctillionTab:Button({
 	Title = "TP to ore storage",
