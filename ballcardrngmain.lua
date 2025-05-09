@@ -244,7 +244,7 @@ local Button = OctillionTab:Button({
 	Locked = false,
 	Callback = function()
 		for i,v in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
-			if string.find(v.Name, "Firework") then
+			if string.find(v.Name, "Box") then
 				game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
 				game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):Activate()
 			end
